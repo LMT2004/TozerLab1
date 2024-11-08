@@ -22,7 +22,7 @@ namespace Lab3
 
         double totalPayment = 0;
         const int MINYEARS = 5;
-        string myName = "Lincoln Tozer";
+        const string MYNAME = "Lincoln Tozer";
 
 
         private void picHelp_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Lab3
                 "Years: must be at least " + MINYEARS + "\n" +
                 "and calculates payments based on: \n\t" +
                 "Yearly interest rate of " + lblRatePerYear.Text+"%";
-            MessageBox.Show(helpMessage, myName);       
+            MessageBox.Show(helpMessage, MYNAME);       
 
         }
 
@@ -43,7 +43,7 @@ namespace Lab3
             //When Exit is clicked, Display Messagebox and close program
             string exitMessage = "Thanks for using the program! \n" +
                 "Total Payments = " + (totalPayment.ToString("C"));
-            MessageBox.Show(exitMessage, myName);
+            MessageBox.Show(exitMessage, MYNAME);
             Close();
         }
         private void ResetAll()
@@ -95,7 +95,7 @@ namespace Lab3
                 else
                 {
                     //if years is under minyears
-                    MessageBox.Show("Years must be at least "+MINYEARS, myName);
+                    MessageBox.Show("Years must be at least "+MINYEARS, MYNAME);
                     txtYears.Clear();
                     txtYears.Focus();
                 }
@@ -103,7 +103,7 @@ namespace Lab3
             catch (Exception ex)
             {
                 //if wrong datatype
-                MessageBox.Show("Message encountered \n"+ ex.Message, myName);
+                MessageBox.Show("Message encountered \n"+ ex.Message, MYNAME);
                 ResetAll();
 
             }
