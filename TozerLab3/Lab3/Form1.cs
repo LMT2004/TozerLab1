@@ -76,7 +76,6 @@ namespace Lab3
             try
             {
                 //declare variables
-                int totalPayments = 0;
                 double futureValue = Convert.ToDouble(txtFutureValue.Text);
                 double payment;
                 double yearlyRate = Convert.ToDouble(lblRatePerYear.Text) / 100;
@@ -104,7 +103,6 @@ namespace Lab3
             {
                 //if wrong datatype
                 MessageBox.Show("Message encountered \n"+ ex.Message, MYNAME);
-                ResetAll();
 
             }
 
